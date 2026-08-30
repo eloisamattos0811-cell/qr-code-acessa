@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Acessa+</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #qrcode {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Acessa+</h1>
+    <p>Aponte a câmera para acessar o aplicativo</p>
+
+    <div id="qrcode"></div>
+
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://acessa-caminho-livre.base44.app",
+            width: 300,
+            height: 300
+        });
+    </script>
+
+</body>
+</html>
